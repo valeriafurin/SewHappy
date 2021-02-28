@@ -1,18 +1,6 @@
-import { gql, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
+import { query } from "./query";
 import "./App.css";
-
-const query = gql`
-  query getPageCollection {
-    pageCollection {
-      items {
-        title
-        logo {
-          url
-        }
-      }
-    }
-  }
-`;
 
 function App() {
   const { loading, error, data } = useQuery(query);
