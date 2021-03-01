@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-export const query = gql`
+export const mainTitleQuery = gql`
   query getPageCollection {
     pageCollection {
       items {

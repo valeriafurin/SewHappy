@@ -1,9 +1,9 @@
 import { useQuery } from "@apollo/client";
-import { query } from "./query";
+import { mainTitleQuery } from "./mainTitleQuery";
 import "./App.css";
 
 function App() {
-  const { loading, error, data } = useQuery(query);
+  const { loading, error, data } = useQuery(mainTitleQuery);
   if (loading) return <p>Loading ...</p>;
   const page = data.pageCollection.items[0];
 
