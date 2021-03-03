@@ -1,20 +1,21 @@
 import { useQuery } from "@apollo/client";
 import { mainTitleQuery } from "./mainTitleQuery";
-import "./App.css";
+import React from "react";
+import GlobalStyle from "./GlobalStyle";
 
 function App() {
-  const { loading, error, data } = useQuery(mainTitleQuery);
+  const { loading, data } = useQuery(mainTitleQuery);
   if (loading) return <p>Loading ...</p>;
   const page = data.pageCollection.items[0];
 
-  // render the fetched Contentful data
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={page?.logo?.url} className="App-logo" alt="logo" />
-        <p>{page?.title}</p>
-      </header>
-    </div>
+    <React.Fragment>
+      <GlobalStyle />
+      <div>
+        <img src={page?.logo?.url} alt="logo" />
+        <h1>{page?.title}</h1>
+      </div>
+    </React.Fragment>
   );
 }
 
