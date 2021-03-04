@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
-  width: 220px;
-  height: 50px;
-  margin-top: 10px;
-  margin-left: 1rem;
-  border: none;
-  outline: none;
-  color: #fff;
-  background: rgba(98, 164, 171, 0.75);
-  cursor: pointer;
-  position: relative;
-  border-radius: 10px;
+export const Button = styled.button<{ primary?: boolean }>`
+  background: ${(props) => (props.primary ? "palevioletred" : "white")};
+  color: ${(props) => (props.primary ? "white" : "palevioletred")};
+
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
 `;
