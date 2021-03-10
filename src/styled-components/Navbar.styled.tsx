@@ -9,6 +9,9 @@ export const Nav = styled.nav`
   padding: 0 1rem;
   z-index: 10;
   justify-content: flex-start;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 `;
 
 export const Logo = styled.a`
