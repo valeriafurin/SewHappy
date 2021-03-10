@@ -1,6 +1,24 @@
 import styled, { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
+export const SewLayout = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 100vh;
+  align-items: center;
+  justify-content: center;
+`;
+
+// const sewBox = styled.div`
+//    {
+//     padding: 0.5rem;
+//     margin: 10px;
+//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+//     transition: 0.3s;
+//     border-radius: 5px;
+//   }
+// `;
+
+export const GlobalStyle = createGlobalStyle`
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -23,9 +41,9 @@ body{
 }
 `;
 
-export default GlobalStyle;
-
 export const Container = styled.div`
+  display: flex;
+  justify-content: space-evenly;
   margin: 0 auto;
   padding: 0 50px;
   max-width: 1300px;
