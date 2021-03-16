@@ -2,10 +2,13 @@ import { useQuery } from "@apollo/client";
 import { mainTitleQuery } from "./mainTitleQuery";
 import React from "react";
 import { SewLayout, GlobalStyle } from "./GlobalStyle";
-import { Button } from "./styled-components/Button.styled";
-import Navbar from "./styled-components/Navbar.index.styled";
+import { Button } from "./components/styled-components/Button.styled";
+import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./pages/homepage";
+import Home from "./pages/HomePage";
+import About from "./pages/AboutPage";
+import FabricCalculator from "./pages/FabricCalculatorPage";
+import SkirtCalculator from "./pages/SkirtCalculatorPage";
 
 function App() {
   const { loading, data } = useQuery(mainTitleQuery);
@@ -14,12 +17,19 @@ function App() {
 
   return (
     <React.Fragment>
+      <GlobalStyle />
       <div>
-        <GlobalStyle />
         <Router>
           <Navbar />
           <Switch>
             <Route path="/" exact component={Home} />
+            <Route path="/About" exact component={About} />
+            <Route
+              path="/FabricCalculator"
+              exact
+              component={FabricCalculator}
+            />
+            <Route path="/SkirtCalculator" exact component={SkirtCalculator} />
           </Switch>
         </Router>
         <SewLayout>
