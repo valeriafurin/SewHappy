@@ -6,7 +6,7 @@ export const StyledBurger = styled.button<{ open?: boolean }>`
 
   @media screen and (max-width: 768px) {
     position: absolute;
-    top: 0;
+    top: auto;
     right: 0;
     display: flex;
     font-size: 1.8rem;
@@ -27,7 +27,7 @@ export const StyledBurger = styled.button<{ open?: boolean }>`
     div {
       width: 2rem;
       height: 0.25rem;
-      background: ${({ open }) => (open ? "#0D0C1D" : "#EFFFFA")};
+      background: ${({ open }) => (open ? "black" : "grey")};
       border-radius: 10px;
       transition: all 0.3s linear;
       position: relative;

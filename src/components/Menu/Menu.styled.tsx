@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledMenu = styled.nav<{ open?: boolean }>`
+export const StyledMenu = styled.nav<{ open: boolean }>`
   display: none;
   color: grey;
 

@@ -1,23 +1,19 @@
-import React from "react";
-import {
-  Nav,
-  Logo,
-  NavLink,
-  Bars,
-  NavMenu,
-} from "./styled-components/Navbar.styled";
+import React, { useState } from "react";
+import { Nav, Logo, NavLink, NavMenu } from "./Navbar.styled";
+import Burger from "../Burger/Burger";
+import { Menu } from "../Menu/Menu";
 
 const Navbar = () => {
-  const [open, setOpen] = React.useState(false);
-  const node = React.useRef();
+  const [open, setOpen] = useState<boolean>(false);
+
   return (
     <Nav>
       <Logo href="/">
         Sew<span>Happy</span>
       </Logo>
-      <div ref={node}>
+      <div>
         <Burger open={open} setOpen={setOpen} />
-        <Menu open={open} setOpen={setOpen} />
+        <Menu open={open} />
       </div>
       <NavMenu>
         <NavLink to="/About">About</NavLink>
