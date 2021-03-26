@@ -1,17 +1,11 @@
 import React from "react";
+import { StyledPagesBanner } from "./PagesBanner.styled";
 
 const Home = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "90vh",
-      }}
-    >
+    <StyledPagesBanner>
       <h1>Home</h1>
-    </div>
+    </StyledPagesBanner>
   );
 };
 
