@@ -9,6 +9,7 @@ import Home from "./pages/HomePage";
 import About from "./pages/AboutPage";
 import FabricCalculator from "./pages/FabricCalculatorPage";
 import SkirtCalculator from "./pages/SkirtCalculatorPage";
+import Blog from "./pages/BlogPage";
 
 function App() {
   const { loading, data } = useQuery(mainTitleQuery);
@@ -30,6 +31,7 @@ function App() {
               component={FabricCalculator}
             />
             <Route path="/SkirtCalculator" exact component={SkirtCalculator} />
+            <Route path="/Blog" exact component={Blog} />
           </Switch>
         </Router>
         <SewLayout>
