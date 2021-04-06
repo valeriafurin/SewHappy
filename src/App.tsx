@@ -1,8 +1,5 @@
-import { useQuery } from "@apollo/client";
-import { mainTitleQuery } from "./mainTitleQuery";
 import React from "react";
-import { GlobalStyle, SewLayout } from "./GlobalStyle";
-import { Button } from "./components/Button/Button.styled";
+import { GlobalStyle } from "./GlobalStyle";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/HomePage";
@@ -12,10 +9,6 @@ import SkirtCalculator from "./pages/SkirtCalculatorPage";
 import Blog from "./pages/BlogPage";
 
 function App() {
-  const { loading, data } = useQuery(mainTitleQuery);
-  if (loading) return <p>Loading ...</p>;
-  const page = data.pageCollection.items[0];
-
   return (
     <React.Fragment>
       <GlobalStyle />
@@ -34,13 +27,6 @@ function App() {
             <Route path="/Blog" exact component={Blog} />
           </Switch>
         </Router>
-        <SewLayout>
-          <h1>{page?.title}</h1>
-          <img src={page?.logo?.url} alt="logo" />
-
-          <Button>Click me</Button>
-          <Button primary>Click me now</Button>
-        </SewLayout>
       </div>
     </React.Fragment>
   );
