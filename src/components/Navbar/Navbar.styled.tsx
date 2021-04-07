@@ -5,7 +5,7 @@ export const Nav = styled.nav`
   background: papayawhip;
   display: flex;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 1rem;
   z-index: 10;
   justify-content: flex-start;
   position: sticky;
