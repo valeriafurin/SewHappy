@@ -6,8 +6,10 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { DateWrapper, SewLayout, Title, Wrapper } from "../GlobalStyle";
 
 const Blog = () => {
-  const { loading, data } = useQuery(blogPostQuery);
+  const { loading, error, data } = useQuery(blogPostQuery);
   if (loading) return <p>Loading ...</p>;
+  if (error) return <p>Error!</p>;
+
   const post = data.blogPostCollection.items[0];
   const blogPostContent = post.blogPostContent.json;
   const date = post.publishDate;
