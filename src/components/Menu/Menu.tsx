@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react"; // importing FunctionComponent
+import React, { FunctionComponent } from "react";
 import { StyledMenu } from "./Menu.styled";
 
 type MenuProps = {
@@ -10,17 +10,21 @@ export const Menu: FunctionComponent<MenuProps> = ({ open }) => {
 
   return (
     <StyledMenu open={open} aria-hidden={!open}>
-      <a href="/" tabIndex={tabIndex}>
+      <a href="/about" tabIndex={tabIndex}>
         <span aria-hidden="true" aria-label="About"></span>
         About
       </a>
-      <a href="/" tabIndex={tabIndex}>
+      <a href="/fabric-calculator" tabIndex={tabIndex}>
         <span aria-hidden="true" aria-label="Fabric Calculator"></span>
         Fabric Calculator
       </a>
-      <a href="/" tabIndex={tabIndex}>
+      <a href="/skirt-calculator" tabIndex={tabIndex}>
         <span aria-hidden="true" aria-label="Skirt Calculator"></span>
         Skirt Calculator
+      </a>
+      <a href="/blog" tabIndex={tabIndex}>
+        <span aria-hidden="true" aria-label="Blog"></span>
+        Blog
       </a>
     </StyledMenu>
   );
