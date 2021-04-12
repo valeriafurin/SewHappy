@@ -17,14 +17,14 @@ function App() {
           <Navbar />
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/About" exact component={About} />
+            <Route path="/about" exact component={About} />
             <Route
-              path="/FabricCalculator"
+              path="/fabric-calculator"
               exact
               component={FabricCalculator}
             />
-            <Route path="/SkirtCalculator" exact component={SkirtCalculator} />
-            <Route path="/Blog" exact component={Blog} />
+            <Route path="/skirt-calculator" exact component={SkirtCalculator} />
+            <Route path="/blog" exact component={Blog} />
           </Switch>
         </Router>
       </div>

@@ -16,10 +16,10 @@ const Navbar = () => {
         <Menu open={open} />
       </div>
       <NavMenu>
-        <NavLink to="/About">About</NavLink>
-        <NavLink to="/FabricCalculator">Fabric Calculator</NavLink>
-        <NavLink to="/SkirtCalculator">Skirt Calculator</NavLink>
-        <NavLink to="/Blog">Blog</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/fabric-calculator">Fabric Calculator</NavLink>
+        <NavLink to="/skirt-calculator">Skirt Calculator</NavLink>
+        <NavLink to="/blog">Blog</NavLink>
       </NavMenu>
     </Nav>
   );
