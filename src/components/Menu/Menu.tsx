@@ -10,19 +10,19 @@ export const Menu: FunctionComponent<MenuProps> = ({ open }) => {
 
   return (
     <StyledMenu open={open} aria-hidden={!open}>
-      <a href="/About" tabIndex={tabIndex}>
+      <a href="/about" tabIndex={tabIndex}>
         <span aria-hidden="true" aria-label="About"></span>
         About
       </a>
-      <a href="/FabricCalculator" tabIndex={tabIndex}>
+      <a href="/fabric-calculator" tabIndex={tabIndex}>
         <span aria-hidden="true" aria-label="Fabric Calculator"></span>
         Fabric Calculator
       </a>
-      <a href="/SkirtCalculator" tabIndex={tabIndex}>
+      <a href="/skirt-calculator" tabIndex={tabIndex}>
         <span aria-hidden="true" aria-label="Skirt Calculator"></span>
         Skirt Calculator
       </a>
-      <a href="/Blog" tabIndex={tabIndex}>
+      <a href="/blog" tabIndex={tabIndex}>
         <span aria-hidden="true" aria-label="Blog"></span>
         Blog
       </a>
