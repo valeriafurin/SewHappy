@@ -6,7 +6,7 @@ import Home from "./pages/HomePage";
 import About from "./pages/AboutPage";
 import FabricCalculator from "./pages/FabricCalculatorPage";
 import SkirtCalculator from "./pages/SkirtCalculatorPage";
-import Blog from "./pages/BlogPage";
+import Blog from "./pages/BlogPostsPage";
 
 function App() {
   return (
