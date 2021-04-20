@@ -5,4 +5,5 @@ export const StyledPagesBanner = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding-top: 5%;
 `;
