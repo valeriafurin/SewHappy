@@ -17,6 +17,7 @@ const mocks = [
         blogPostCollection: {
           items: [
             {
+              uId: "first",
               headline: "Hi there!",
               headlineImage: {
                 description: "Just for testing",
