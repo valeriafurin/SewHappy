@@ -1,22 +1,23 @@
 import React from "react";
 import { render, cleanup, findAllByText } from "@testing-library/react";
 import { MockedProvider } from "@apollo/client/testing";
-import { blogPostQuery } from "../../queries/blogPostQuery";
+import { blogPostsQuery } from "../../queries/blogPostsQuery";
 
-import Blog from "../BlogPage";
+import Blog from "../BlogPostsPage";
 
 afterEach(cleanup);
 
 const mocks = [
   {
     request: {
-      query: blogPostQuery,
+      query: blogPostsQuery,
     },
     result: {
       data: {
         blogPostCollection: {
           items: [
             {
+              uId: "first",
               headline: "Hi there!",
               headlineImage: {
                 description: "Just for testing",

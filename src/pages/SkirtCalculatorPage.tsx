@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledPagesBanner } from "./PagesBanner.styled";
+import { StyledPagesBanner } from "./pagesStyles/PagesBanner.styled";
 
 const SkirtCalculator = () => {
   return (

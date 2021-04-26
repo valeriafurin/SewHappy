@@ -1,9 +1,10 @@
 import { gql } from "@apollo/client";
 
-export const blogPostQuery = gql`
+export const blogPostsQuery = gql`
   query getBlogPost {
     blogPostCollection(order: publishDate_DESC) {
       items {
+        uId
         headline
         headlineImage {
           description
