@@ -1,9 +1,10 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
-import { StyledPagesBanner } from "./pagesStyles/PagesBanner.styled";
-import { blogPostsQuery } from "../queries/blogPostsQuery";
-import SingleBlogArticle from "./SingleBlogArticlePage";
+import { StyledPagesBanner } from "../pagesStyles/PagesBanner.styled";
+import { blogPostsQuery } from "./blogPostsQuery";
+import SingleBlogArticle from "../SingleBlogArticle/SingleBlogArticlePage";
 import { BlogPost } from "./BlogpPostsPage.types";
+import { SewLayout } from "../pagesStyles/BlogStyle.styled";
 
 const Blog = () => {
   const { loading, error, data } = useQuery(blogPostsQuery);
@@ -16,9 +17,11 @@ const Blog = () => {
       <StyledPagesBanner>
         <h1>The Sewing Blog</h1>
       </StyledPagesBanner>
-      {data.blogPostCollection.items.map((post: BlogPost) => {
-        return <SingleBlogArticle post={post} />;
-      })}
+      <SewLayout>
+        {data.blogPostCollection.items.map((post: BlogPost) => {
+          return <SingleBlogArticle post={post} />;
+        })}
+      </SewLayout>
     </div>
   );
 };
