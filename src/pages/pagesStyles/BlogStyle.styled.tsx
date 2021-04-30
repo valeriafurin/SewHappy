@@ -12,5 +12,4 @@ export const SewLayout = styled.section`
 export const DateWrapper = styled.p`
   font-size: 1.1rem;
   text-align: center;
-  padding-top: 10px;
 `;
