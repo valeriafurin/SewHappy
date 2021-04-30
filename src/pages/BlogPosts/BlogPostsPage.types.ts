@@ -9,6 +9,6 @@ export type BlogPost = {
   headline: string;
   uId: string;
 };
-export type SingleBlogArticleProps = {
+export type BlogArticleCardProps = {
   post: BlogPost;
 };
