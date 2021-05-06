@@ -19,9 +19,11 @@ export const CardHeading = styled.h1`
 `;
 
 export const CardBody = styled.div`
-  font-size: 75%;
-  padding-right: 32px;
-  padding-left: 32px;
+  font-size: 100%;
+  font-weight: bolder;
+
+  padding-right: 18%;
+  padding-left: 18%;
 `;
 
 export const ReadMore = styled.p`
