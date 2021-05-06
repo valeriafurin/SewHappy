@@ -3,7 +3,7 @@ import { render, cleanup, findAllByText } from "@testing-library/react";
 import { MockedProvider } from "@apollo/client/testing";
 import { blogPostsQuery } from "../BlogPosts/blogPostsQuery";
 
-import Blog from "../BlogPosts/BlogPostsPage";
+import Blog from "../BlogPosts/Blog";
 
 afterEach(cleanup);
 

@@ -6,7 +6,7 @@ import Home from "./pages/HomePage";
 import About from "./pages/AboutPage";
 import FabricCalculator from "./pages/FabricCalculatorPage";
 import SkirtCalculator from "./pages/SkirtCalculatorPage";
-import Blog from "./pages/BlogPosts/BlogPostsPage";
+import Blog from "./pages/BlogPosts/Blog";
 import FullBlogPost from "./pages/BlogPosts/FullBlogPost";
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
             />
             <Route path="/skirt-calculator" exact component={SkirtCalculator} />
             <Route path="/blog" exact component={Blog} />
-            <Route path="/blog/:id" component={FullBlogPost} />
+            <Route path="/blog/:uid" exact component={FullBlogPost} />
           </Switch>
         </Router>
       </div>
