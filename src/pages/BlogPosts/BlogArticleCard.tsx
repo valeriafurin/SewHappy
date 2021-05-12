@@ -8,6 +8,7 @@ import {
 } from "../pagesStyles/CardStyle.styled";
 import { BlogArticleCardProps } from "./BlogPostsPage.types";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Link } from "react-router-dom";
 
 let truncateString = (str: string, num: number): string => {
@@ -21,6 +22,7 @@ const BlogArticleCard: React.FC<BlogArticleCardProps> = ({ post }) => {
   const blogPostContent = post.blogPostContent.json;
   let stringedText = documentToHtmlString(blogPostContent);
   let shortenedText = truncateString(stringedText, 100);
+  var stripedHtml = shortenedText.replace(/<[^>]+>/g, "");
 
   const date = post.publishDate;
   let d = new Date(date);
@@ -41,7 +43,7 @@ const BlogArticleCard: React.FC<BlogArticleCardProps> = ({ post }) => {
             <h1>{post?.headline}</h1>
           </CardHeading>
           <CardBody>
-            <p>{shortenedText}</p>
+            <p>{stripedHtml}</p>
             <ReadMore>MORE</ReadMore>
           </CardBody>
           <DateWrapper>
@@ -54,3 +56,6 @@ const BlogArticleCard: React.FC<BlogArticleCardProps> = ({ post }) => {
 };
 
 export default BlogArticleCard;
+function documentToReactComponent(shortenedText: string): React.ReactNode {
+  throw new Error("Function not implemented.");
+}
