@@ -5,7 +5,6 @@ export const CardWrapper = styled.div`
   width: 20em;
   padding-bottom: 4px;
   margin: 10px 15px;
-  font-family: Quicksand, arial, sans-serif;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
   border-radius: 5px;
   display: block;
@@ -20,7 +19,7 @@ export const CardHeading = styled.h1`
 
 export const CardBody = styled.div`
   font-size: 100%;
-  font-weight: bolder;
+  font-weight: lighter;
 
   padding-right: 18%;
   padding-left: 18%;

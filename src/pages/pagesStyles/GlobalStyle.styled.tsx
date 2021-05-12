@@ -15,7 +15,6 @@ html {
 body{
     font-family: "Shippori Mincho B1", serif;
     font-weight: 500;
-    line-height: 1.6;
     font-size: 1.6rem;
     background: #F9F9F9;
     color: #333;
