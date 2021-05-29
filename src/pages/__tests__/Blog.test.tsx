@@ -1,9 +1,9 @@
 import React from "react";
 import { render, cleanup, findAllByText } from "@testing-library/react";
 import { MockedProvider } from "@apollo/client/testing";
-import { blogPostsQuery } from "../../queries/blogPostsQuery";
+import { blogPostsQuery } from "../BlogPosts/blogPostsQuery";
 
-import Blog from "../BlogPostsPage";
+import Blog from "../BlogPosts/Blog";
 
 afterEach(cleanup);
 
